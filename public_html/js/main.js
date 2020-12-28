@@ -20,7 +20,6 @@ $(document).ready(function(){
 //All functions to call to start the game
 function start() {
     compileAllJSON();
-    load();
 }
 
 //Function to save data
@@ -36,12 +35,19 @@ function load() {
 
 //Function to init variables to starting values
 function init() {
-    
+    global.player.melee = new Melee(1);
+    global.player.pistol = null;
+    global.player.stim = null;
+    global.player.elemental = null;
+    global.player.throwable = null;
+    global.player.sniper = null;
+    global.player.mg = null;
 }
 
 //Functions to call when game is in run state (compiling and loading/initialization is done)
 function run() {
     testWeaponSpawn();
+    renderCombatBar();
 }
 
 
@@ -70,6 +76,7 @@ function compileJSON(JSONfile, obj) {
             compileCount ++;
             //If all compiles are done then call run function
             if (compileCount === filesToCompile) {
+                load();
                 run();
             }
             return true;

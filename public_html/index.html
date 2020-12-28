@@ -9,6 +9,7 @@ and open the template in the editor.
         <title>Cyberpunk Story Game</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" type="text/css">
         <!--FAVICON INFO-->
         <link rel="apple-touch-icon" sizes="180x180" href="src/favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="src/favicon/favicon-32x32.png">
@@ -17,11 +18,88 @@ and open the template in the editor.
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!--/JS Scripts-->
         <script src="js/main.js"></script>
+        <script src='js/ui.js'></script>
+        <script src='js/render.js'></script>
         <script src="js/util.js"></script>
         <script src="js/item.js"></script>
         <script src="js/character.js"></script>
     </head>
     <body>
-        <div>TODO write content</div>
+        
+        <!-- Backdrop Image -->
+        <img src="https://images3.alphacoders.com/157/thumb-1920-157265.jpg" class="full" id="backdrop">
+        
+        <!-- Dialogue Overlay -->
+        <div class='hide' id="dialogue-overlay">
+            <div id="dialogue-name">Player</div>
+            <div id="dialogue-text">
+                Sample Dialogue text.....
+            </div>
+            <div class='dialogue-avatar-container' id="dialogue-left-avatar-container">
+                <img id='dialogue-left-avatar' class='dialogue-avatar' src='src/icons/chars/overlord-helm.png'>
+            </div>
+            <div class='dialogue-avatar-container' id="dialogue-right-avatar-container">
+                <img id='dialogue-left-avatar' class='dialogue-avatar' src='src/icons/chars/overlord-helm.png'>
+            </div>
+        </div>
+        
+        <!--Combat Section-->
+        <div class="section full">
+            <div class="side-panel" id="left-side-panel">
+                <div class="character-bar">
+                    <h3>Player</h3>
+                    <div class="character-bar-health-bar">
+                        <div class="character-bar-health"></div>
+                    </div>
+                    <div class="character-bar-status">-30</div>
+                    <img src="src/icons/chars/overlord-helm.png" class="character-bar-avatar">
+                </div>
+            </div>
+            <div id="combat-bar">
+                <div class="combat-buttons-section">
+                    <div class="combat-buttons" id="combat-melee">M</div>
+                    <div class="combat-buttons" id="combat-pistol">P</div>
+                    <div class="combat-buttons" id="combat-stim">S</div>
+                    <div class="combat-buttons" id="combat-elemental">E</div>
+                    <div class="combat-buttons" id="combat-throwable">T</div>
+                    <div class="combat-buttons" id="combat-sniper">S</div>
+                    <div class="combat-buttons" id="combat-mg">MG</div>
+                </div>
+                
+            </div>
+            <div id="combat-info-section" class='hide'>Weapon Name</div>
+            <div class="side-panel" id="right-side-panel">
+                <div class="character-bar">
+                    <h3>Enemy</h3>
+                    <div class="character-bar-health-bar">
+                        <div class="character-bar-health enemy-bar-health"></div>
+                    </div>
+                    <div class="character-bar-status enemy-bar-status">-30</div>
+                    <img src="src/icons/chars/overlord-helm.png" class="character-bar-avatar enemy-bar-avatar">
+                </div>
+                <div class="character-bar">
+                    <h3>Enemy</h3>
+                    <div class="character-bar-health-bar">
+                        <div class="character-bar-health enemy-bar-health"></div>
+                    </div>
+                    <div class="character-bar-status enemy-bar-status">-30</div>
+                    <img src="src/icons/chars/overlord-helm.png" class="character-bar-avatar enemy-bar-avatar">
+                </div>
+                <div class="character-bar">
+                    <h3>Enemy</h3>
+                    <div class="character-bar-health-bar">
+                        <div class="character-bar-health enemy-bar-health"></div>
+                    </div>
+                    <div class="character-bar-status enemy-bar-status">-30</div>
+                    <img src="src/icons/chars/overlord-helm.png" class="character-bar-avatar enemy-bar-avatar">
+                </div>
+            </div>
+            <div id="turn-order">
+                <div id='turn-order-current-avatar'></div>
+                <img src='src/icons/chars/overlord-helm.png' class='turn-order-avatar'>
+                <img src='src/icons/chars/overlord-helm.png' class='turn-order-avatar'>
+                <img src='src/icons/chars/overlord-helm.png' class='turn-order-avatar'>
+            </div>
+        </div>
     </body>
 </html>

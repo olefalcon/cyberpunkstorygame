@@ -2,12 +2,12 @@
     "melees": [
         {
             "name": "Pool Cue",
-            "icon": "src/icons/melees/poolcue.png",
+            "icon": "src/icons/melees/wood-stick.png",
             "tier": 1
         },
         {
             "name": "Steak Knife",
-            "icon": "src/icons/melees/steakknife.png",
+            "icon": "src/icons/melees/wood-stick.png",
             "tier": 1
         }
     ]

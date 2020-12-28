@@ -83,6 +83,17 @@ class Item {
     set adj(x) {
         this._adj = x;
     }
+    
+    //Render methods
+    combatBarRender() {
+        let html = "<img src='"+this._icon+"' class='combat-button-icon'>";
+        return html;
+    }
+    combatInfoRender() {
+        let html = "<div>" + this._adj + " " + this._name + "</div>";
+        return html;
+    }
+    
 }
 
 class Weapon extends Item {

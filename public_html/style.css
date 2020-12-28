@@ -7,4 +7,230 @@ and open the template in the editor.
     Created on : Nov 3, 2020, 10:32:02 PM
     Author     : olefa
 */
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
+:root {
+    --emerald: #2ecc71;
+    --red: #e74c3c;
+    --aqua: #73fffe;
+    --blue: #6287f8;
+}
+.hide {
+    display: none;
+}
+html {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat, Arial;
+    font-size: 1em;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+.full {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#backdrop {
+    z-index: 1;
+}
+#dialogue-overlay {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background: rgb(0,0,0,0.9);
+}
+#dialogue-text {
+    height: 20vh;
+    width: 60vw;
+    position: absolute;
+    top: 70vh;
+    left: 20vw;
+    background: rgb(0,0,0,0.8);
+    padding: 0 4vw;
+    line-height: 20vh;
+    color: var(--blue);
+    border: 1px solid var(--aqua);
+    box-sizing: border-box;
+    font-size: 1.5em;
+}
+#dialogue-text p {
+    margin: 0;
+}
+#dialogue-name {
+    height: 5vh;
+    width: 20vw;
+    position: absolute;
+    top: 65vh;
+    left: 40vw;
+    background: var(--blue);
+    text-align: center;
+    padding: 0.5vh 0;
+    border: 1px solid var(--aqua);
+    border-bottom: none;
+    box-sizing: border-box;
+    font-size: 2em;
+}
+.dialogue-avatar-container {
+    height: 20vh;
+    width: 20vh;
+    position: absolute;
+    top: 70vh;
+    background: rgb(0,0,0,0.8);
+    border-radius: 50%;
+    border: 1px solid var(--aqua);
+    box-sizing: border-box;
+}
+#dialogue-left-avatar-container {
+    right: 81vw;
+}
+#dialogue-right-avatar-container {
+    left: 81vw;
+}
+.dialogue-avatar {
+    display: box;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.section {
+    z-index: 2;
+}
+.side-panel {
+    height: 100vh;
+    width: 25vw;
+    color: white;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: 0;
+}
+#left-side-panel {
+    left: 0;
+}
+#right-side-panel {
+    right: 0;
+}
+#combat-bar {
+    height: 10vh;
+    width: 50vw;
+    position: absolute;
+    left: 25vw;
+    bottom: 0;
+    background: rgb(0,0,0,0.8);
+    color: white;
+}
+h1 {
+    width: 100%;
+    text-align: center;
+}
+h3 {
+    margin: 0;
+}
+h5 {
+    margin: 0;
+}
+.character-bar {
+    width: 80%;
+    margin: 2vh auto;
+    padding: 1vh 0;
+    text-align: center;
+    background: rgb(0,0,0,0.8);
+    border-radius: 2vh;
+}
+.character-bar-health-bar {
+    height: 1vh;
+    width: 80%;
+    margin: 0 auto;
+    background: grey;
+    margin-top: 1vh;
+}
+.character-bar-health {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+    background: var(--emerald);
+}
+.enemy-bar-health {
+    background: var(--red);
+}
+.character-bar-status {
+    height: 5vh;
+    width: 5vw;
+    position: absolute;
+    top: 5vh;
+    left: 110%;
+    color: var(--red);
+}
+.character-bar-avatar {
+    display: box;
+    height: 8vh;
+    width: 8vh;
+    position: absolute;
+    left: 95%;
+    top: 2vh;
+}
+.enemy-bar-avatar {
+    left: -10%;
+}
+.enemy-bar-status {
+    left: -40%;
+    text-align: right;
+}
+.combat-buttons {
+    float: left;
+    width: calc(50vw/7);
+    height: 10vh;
+    border: 1px solid white;
+    box-sizing: border-box;
+    text-align: center;
+}
+.combat-button-icon {
+    height: 100%;
+    width: 10vh;
+    margin: 0 auto;
+}
+#combat-info-section {
+    height: 20vh;
+    width: 50vw;
+    position: absolute;
+    bottom: 10vh;
+    left: 25vw;
+    background: black;
+    color: white;
+}
+#turn-order {
+    width: 4vw;
+    position: absolute;
+    top: 0;
+    left: 48vw;
+}
+.turn-order-avatar {
+    height: 4vw;
+    width: 4vw;
+    background: black;
+    margin: 0;
+}
+#turn-order-current-avatar {
+    height: 4vw;
+    width: 4vw;
+    background: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    outline: 2px solid var(--emerald);
+}
